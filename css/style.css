@@ -23,7 +23,9 @@ body {
     cursor: pointer;
     box-shadow: 0px 5px 19px -2px rgba(0,0,0,0.7);
 }
+/* /UTILITIES */
 
+/* Sezione acquista biglietto*/
 input {
     padding: 10px 20px;
     border: none;
@@ -74,8 +76,11 @@ input {
     text-align: center;
     font-size: .7em;
 }
+/* Fine sezione acquista biglietto */
 
-.ticket{
+/* Sezione Biglietto */
+.ticket-container {
+    display: none;
     padding: 2em 0;
     background-color: brown;
     border: 2px solid white;
@@ -87,6 +92,43 @@ input {
     margin-bottom: 2em;
     text-align: center;
 }
+
+.ticket {
+    display: flex;
+    margin: 50px;
+    background-color: rgb(118, 149, 237);
+    border: 1px solid black;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.passenger-info {
+    padding: 20px;
+    width: 30%;
+    background-color: rgb(243, 199, 4);
+    border-right: 1px solid black;  
+}
+
+.ticket h3 {
+    margin-bottom: 1em;
+}
+
+.ticket-info {
+    width: 70%;
+}
+
+.ticket-info>* {
+    padding: 20px;
+}
+
+
+
 
 
 

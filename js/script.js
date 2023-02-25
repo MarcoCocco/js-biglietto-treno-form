@@ -33,10 +33,16 @@ Pseudo codice:
    :ALTRIMENTI il prezzo rimane uguale al numero di KM percorsi.
 4- Il prezzo finale deve essere espresso con massimo due decimali.
 */
-
+let userNameEl = document.getElementById('userName');
 let distanceEl = document.getElementById('distance');
 let userAgeEl = document.getElementById('userAge');
 let submitEl = document.getElementById('submit');
+
+let ticketContainerEl = document.querySelector('.ticket-container');
+let passengerNameEl = document.getElementById('passenger-name');
+let discountPriceEl = document.getElementById('discount-price');
+let codeEl = document.getElementById('code');
+let finalPriceEl = document.getElementById('final-price');
 
 submitEl.addEventListener('click', function () {
     let price = distanceEl.value * 0.21;
@@ -47,11 +53,23 @@ submitEl.addEventListener('click', function () {
     let finalPrice40 = price - discountPrice40;
 
     if (userAgeEl.value < 18) {
-        document.writeln(`Il prezzo del tuo biglietto è di ${finalPrice20.toFixed(2)}€`);
+        ticketContainerEl.style.display = "block";
+        passengerNameEl.textContent = userNameEl.value;
+        discountPriceEl.textContent = "Prezzo scontato del 20%";
+        codeEl.textContent = Math.floor(Math.random() * 100000);
+        finalPriceEl.textContent = `${finalPrice20.toFixed(2)}€`;
     } else if (userAgeEl.value > 65) {
-        document.writeln(`Il prezzo del tuo biglietto è di ${finalPrice40.toFixed(2)}€`);
+        ticketContainerEl.style.display = "block";
+        passengerNameEl.textContent = userNameEl.value;
+        discountPriceEl.textContent = "Prezzo scontato del 40%";
+        codeEl.textContent = Math.floor(Math.random() * 100000);
+        finalPriceEl.textContent = `${finalPrice40.toFixed(2)}€`;
     } else {
-        document.writeln(`Il prezzo del tuo biglietto è di ${price.toFixed(2)}€`);
+        ticketContainerEl.style.display = "block";
+        passengerNameEl.textContent = userNameEl.value;
+        discountPriceEl.textContent = "Biglietto Standard";
+        codeEl.textContent = Math.floor(Math.random() * 100000);
+        finalPriceEl.textContent = `${price.toFixed(2)}€`;
     }
 });
 
