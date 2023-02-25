@@ -34,3 +34,17 @@ Pseudo codice:
 4- Il prezzo finale deve essere espresso con massimo due decimali.
 */
 
+let bodyEl = document.querySelector('body');
+
+let distanceEl = document.getElementById('distance');
+let userAgeEl = document.getElementById('userAge');
+
+let price = distanceEl * 0.21;
+let discountPrice20 = (price * 20) / 100;
+let discountPrice40 = (price * 40) / 100;
+
+let ticketButtonEl = document.getElementById('ticketButton');
+
+ticketButtonEl.addEventListener('click', function() {
+    console.log('Barbapapà');
+})
