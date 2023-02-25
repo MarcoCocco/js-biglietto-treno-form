@@ -36,9 +36,9 @@ Pseudo codice:
 
 let distanceEl = document.getElementById('distance');
 let userAgeEl = document.getElementById('userAge');
-let ticketButtonEl = document.getElementById('ticketButton');
+let submitEl = document.getElementById('submit');
 
-ticketButtonEl.addEventListener('click', function () {
+submitEl.addEventListener('click', function () {
     let price = distanceEl.value * 0.21;
     let discountPrice20 = (price * 20) / 100;
     let discountPrice40 = (price * 40) / 100;
@@ -53,8 +53,6 @@ ticketButtonEl.addEventListener('click', function () {
     } else {
         document.writeln(`Il prezzo del tuo biglietto è di ${price.toFixed(2)}€`);
     }
-
-
 });
 
 

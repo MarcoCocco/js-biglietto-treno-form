@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,54 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <form action="GET">
-        <label for="distance">KM</label>
-        <input type="number" id="distance" name="distance">
+    <div class="buy-ticket container-centered">
 
-        <label for="userAge">Età</label>
-        <input type="number" id="userAge" name="userAge">
-        
-        <button type="button" id="ticketButton">Esegui</button>
-    </form>
-    
+        <div class="title">
+            <h1>Acquista il tuo biglietto</h1>
+        </div>
+        <form action="GET">
+            <div class="form-container">
+                <div class="col">
+                    <label for="userName">Come ti chiami?</label><br>
+                    <input type="text" id="userName" name="userName" placeholder="Inserisci nome e cognome">
+                </div>
+
+                <div class="col">
+                    <label for="userAge">Quanti anni hai?*</label><br>
+                    <input type="number" id="userAge" name="userAge" placeholder="Inserisci la tua età">
+                </div>
+
+                <div class="col">
+                    <label for="distance">Quanti Km vuoi percorrere?</label><br>
+                    <input type="number" id="distance" name="distance" placeholder="Inserisci la distanza (KM)">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="btn" id="submit">Invia</button>
+                <button type="reset" class="btn" id="reset">Reset</button>
+            </div>
+        </form>
+
+        <div class="discount-info">
+            <p>* Sconti applicati del 20% per gli under 18 e del 40% per gli over 65</p>
+        </div>
+
+    </div>
+
+    <div class="ticket container-centered">
+        <div class="ticket-title">
+            <h1>Il tuo biglietto</h1>
+        </div>
+        <div class="ticket-info">
+          
+        </div>
+    </div>
+
     <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
